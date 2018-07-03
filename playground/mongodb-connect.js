@@ -1,6 +1,16 @@
-const MongoClient = require('mongodb').MongoClient;
+// const MongoClient = require('mongodb').MongoClient;
+const {MongoClient, ObjectID} = require('mongodb');
 
-MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
+var obj = new ObjectID(); //Returns ObjectID
+console.log(obj);
+
+
+
+var user = {name: 'Timothy', age: 27};
+var {name} = user; // Destructuring an object
+console.log(name);
+
+MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true }, (err, client) => {
     if (err) {
         return console.log('Unable to connect to MongoDB server.')
     }
@@ -25,7 +35,8 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
         if (err) {
             return console.log('Unable to create user', err);
         }
-        console.log(JSON.stringify(result.ops, undefined, 2))
+        // console.log(JSON.stringify(result.ops, undefined, 2));
+        console.log(result.ops[0]._id.getTimestamp());
     });
 
     client.close();
