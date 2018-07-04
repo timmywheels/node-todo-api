@@ -37,7 +37,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
             location: 'Seekonk, MA'
         },
         $inc: {
-            age: +1
+            age: -1
         }
     }, {
         returnOriginal: false
