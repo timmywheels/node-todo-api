@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js", // tell heroku how to start server
+    "start": "node server/server.js",
     "test": "mocha server/**/*.test.js",
     "test-watch": "nodemon --exec 'npm test'"
   },
-  "engines": { // tell heroku which node version
+  "engines": {
     "node": "10.1.0"
   },
   "author": "",
