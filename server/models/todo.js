@@ -19,26 +19,3 @@ let Todo = mongoose.model('Todo', {
 });
 
 module.exports = {Todo};
-
-//
-// let newTodo = new Todo({
-//     text: 'Cook dinner',
-// });
-//
-// let otherTodo = new Todo({
-//     text: 'Workout',
-//     completed: true,
-//     completedAt: 1300
-// });
-//
-// newTodo.save().then((doc) => {
-//     console.log('Saved todo', doc);
-// }, (e) => {
-//     console.log('Unable to save todo.');
-// });
-//
-// otherTodo.save().then((doc) => {
-//     console.log(JSON.stringify(doc, undefined, 2));
-// }, (e) => {
-//     console.log('Unable to save todo.');
-// });
